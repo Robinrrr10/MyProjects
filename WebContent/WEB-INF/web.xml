@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>RNetBanking</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>indx</servlet-name>
+    <jsp-file>/index.jsp</jsp-file>
+    <init-param>
+      <param-name>bankname</param-name>
+      <param-value>Bank of Rob</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>indx</servlet-name>
+    <url-pattern>/index.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>sign</servlet-name>
+    <jsp-file>/jsp/login.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sign</servlet-name>
+    <url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>newAcc</servlet-name>
+    <jsp-file>/jsp/createAccount.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>newAcc</servlet-name>
+    <url-pattern>/opennew</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>regis</servlet-name>
+    <jsp-file>/jsp/registerInternetBank.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>regis</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>
