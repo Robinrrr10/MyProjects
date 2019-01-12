@@ -75,7 +75,7 @@ public class CreateAccountApi extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	    	pw.print("Your record was added successfully");
+	    	pw.print("Your record has been added successfully");
 	    }else if(header_nm.equalsIgnoreCase("update")){    //here we can update only aadhar number and mobile number
 	    	String query = "UPDATE account_detail SET aadhar_no="+adhar_no+", mobile_no="+mobile_no+" WHERE name='"+name+"';";
 			System.out.println("Query was:"+query);
@@ -91,15 +91,10 @@ public class CreateAccountApi extends HttpServlet {
 			JSONObject rj = new JSONObject();
 			rj.put("updated_aadhar", adhar_no);
 			rj.put("updated_mobile", mobile_no);
-			
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
 			pw.print(rj);
-			
-			
-			//pw.print(a);
-	    	//pw.print("Your record was updated successfully");
-	    }else {
+		  }else {
 	    	response.setStatus(500);
 	    	pw.print("Invalid header");
 	    }
